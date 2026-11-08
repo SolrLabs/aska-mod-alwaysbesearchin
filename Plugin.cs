@@ -9,7 +9,7 @@ namespace AlwaysBeSearchin;
 [BepInPlugin(Guid, Name, Version)]
 public class Plugin : BasePlugin
 {
-    public const string Guid = "aska.alwaysbesearchin";
+    public const string Guid = "solrlabs.aska.alwaysbesearchin";
     public const string Name = "Always Be Searchin'";
     public const string Version = "0.1.1";
 

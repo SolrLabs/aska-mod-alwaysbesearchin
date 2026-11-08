@@ -4,7 +4,7 @@ Gatherable items near you always glow softly, so you can spot resources as you w
 
 ## Settings
 
-Edit `BepInEx/config/aska.alwaysbesearchin.cfg` (created on first launch), section `[General]`.
+Edit `BepInEx/config/solrlabs.aska.alwaysbesearchin.cfg` (created on first launch), section `[General]`.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
