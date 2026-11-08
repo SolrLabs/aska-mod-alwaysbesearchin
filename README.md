@@ -37,6 +37,8 @@ The glow is purely visual and local. Nothing is sent over the network, other pla
 
 Install through a mod manager such as [Pulsar](https://pulsarmods.com), Thunderstore Mod Manager or r2modman. It also installs the required BepInEx pack.
 
+Download from [Thunderstore](https://thunderstore.io/c/aska/p/SolrLabs/Always_Be_Searchin/) or [Nexus Mods](https://www.nexusmods.com/aska/mods/185).
+
 ## Building from source
 
 You need the .NET SDK and the game with BepInEx installed.
