@@ -35,7 +35,7 @@ The glow is purely visual and local. Nothing is sent over the network, other pla
 
 ## Install
 
-Install through a mod manager (Thunderstore Mod Manager, r2modman or similar). It also installs the required BepInEx pack.
+Install through a mod manager such as [Pulsar](https://pulsarmods.com), Thunderstore Mod Manager or r2modman. It also installs the required BepInEx pack.
 
 ## Building from source
 
