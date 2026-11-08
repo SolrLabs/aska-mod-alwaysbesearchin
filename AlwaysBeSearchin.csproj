@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- BepInEx 6 IL2CPP plugin for ASKA. BepInEx be.788 hosts plugins on .NET 6 (CoreCLR). -->
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>AlwaysBeSearchin</AssemblyName>
+    <RootNamespace>AlwaysBeSearchin</RootNamespace>
+    <Version>0.1.1</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <!-- Optional per-developer settings (PulsarLocalMods); see Local.props.example. -->
+  <Import Project="Local.props" Condition="Exists('Local.props')" />
+
+  <!-- Where the game lives. Override with -p:AskaDir=... on another machine. -->
+  <PropertyGroup>
+    <AskaDir Condition="'$(AskaDir)' == ''">$(HOME)/Library/Application Support/CrossOver/Bottles/Steam/drive_c/Program Files (x86)/Steam/steamapps/common/ASKA</AskaDir>
+    <BepInExDir>$(AskaDir)/BepInEx</BepInExDir>
+    <!-- Pulsar profile's local_mods folder; unset skips the post-build copy. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(BepInExDir)/core/BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(BepInExDir)/core/BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(BepInExDir)/core/Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(BepInExDir)/core/Il2CppInterop.Common.dll" Private="false" />
+    <Reference Include="$(BepInExDir)/core/0Harmony.dll" Private="false" />
+    <Reference Include="$(BepInExDir)/interop/*.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="tests/**" />
+  </ItemGroup>
+
+  <Target Name="CopyToPulsar" AfterTargets="Build" Condition="'$(PulsarLocalMods)' != '' And Exists('$(PulsarLocalMods)/..')">
+    <MakeDir Directories="$(PulsarLocalMods)/AlwaysBeSearchin" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PulsarLocalMods)/AlwaysBeSearchin" />
+    <Message Importance="high" Text="AlwaysBeSearchin -> $(PulsarLocalMods)/AlwaysBeSearchin" />
+  </Target>
+
+</Project>

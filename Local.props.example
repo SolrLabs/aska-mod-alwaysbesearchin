@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <PulsarLocalMods>$(HOME)/path/to/Pulsar/profiles/&lt;profile-id&gt;/local_mods</PulsarLocalMods>
+  </PropertyGroup>
+</Project>

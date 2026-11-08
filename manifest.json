@@ -1,0 +1,7 @@
+{
+  "name": "AlwaysBeSearchin",
+  "version_number": "0.1.1",
+  "website_url": "https://github.com/SolrLabs/aska-mod-alwaysbesearchin",
+  "description": "Always Be Searchin': gatherable items always glow softly around you; Z still gives the full Resource Finder pulse.",
+  "dependencies": ["BepInEx-BepInExPack_IL2CPP-6.0.788"]
+}
