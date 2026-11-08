@@ -4,6 +4,7 @@
 
 - The version in the load message now always matches the plugin's version.
 - The plugin's ID is now `solrlabs.aska.alwaysbesearchin`, so settings live in `BepInEx/config/solrlabs.aska.alwaysbesearchin.cfg`.
+- The Thunderstore package is named Always_Be_Searchin, shown as "Always Be Searchin".
 
 ## 0.1.0
 
